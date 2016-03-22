@@ -1,0 +1,1024 @@
+@import url(http://fonts.googleapis.com/css?family=Karla:400,700);
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+a:hover {
+  font-weight: normal;
+}
+
+.robot {
+  position: relative;
+  height: 70px;
+  width: 100px;
+  margin: 50px auto;
+  border: 5px solid #000000;
+  border-radius: 8px;
+  /* This box shadow is his neck */
+  box-shadow: 0px 40px 0px -32px #000000;
+  background: #000000;
+}
+.robot:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: -22px;
+  width: 12px;
+  height: 25px;
+  border: 5px solid #000000;
+  background: #000000;
+  border-radius: 5px;
+}
+.robot:after {
+  content: '';
+  position: absolute;
+  top: 19px;
+  right: -22px;
+  width: 12px;
+  height: 25px;
+  border: 5px solid #000000;
+  background: #000000;
+  border-radius: 5px;
+}
+.robot p {
+  position: absolute;
+  top: -30px;
+  left: -330px;
+  text-indent: -10px;
+  font-family: 'Karla';
+}
+.robot p span {
+  font-family: helvetica;
+  font-size: 3em;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color: #333333;
+  text-shadow: 1px 1px #545454,
+               2px 2px #545454,
+               3px 3px #4C4C4C,
+               4px 4px #4C4C4C,
+               5px 5px #858585,
+               6px 6px #858585,
+               7px 7px #BFBFBF,
+               8px 8px #BFBFBF;
+}
+
+.antena {
+  content: '';
+  position: absolute;
+  left: 7px;
+  width: 5px;
+  height: 15px;
+  background-color: #000000;
+  top: -19px;
+  left: 42px;
+}
+.antena:before {
+  position: absolute;
+  top: -16px;
+  left: -8px;
+  width: 21px;
+  height: 17px;
+  border-radius: 50%;
+  content: '';
+  background-color: #9E9E9E;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  animation: sonarWave 2s linear infinite
+}
+.antena:after {
+  content: '';
+  position: absolute;
+  top: -17px;
+  left: -8px;
+  width: 21px;
+  height: 18px;
+  border: 5px solid #000000;
+  border-radius: 21px;
+  background: #000000;
+}
+
+.face {
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  height: 22px;
+  width: 12px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.face:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 54px;
+  height: 22px;
+  width: 12px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.face:after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 13px;
+  width: 42px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.body {
+  position: absolute;
+  top: 73px;
+  left: -25px;
+  height: 97px;
+  width: 140px;
+  border: 5px solid #000000;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.bowtie {
+  background-color: #000000;
+  border-radius: 16px;
+}
+
+.bowtie:before {
+
+}
+.bowtie:after {
+
+}
+
+.arm-right {
+  position: absolute;
+  top: 90px;
+  left: 118px;
+  height: 55px;
+  width: 10px;
+  background: #000000;
+}
+.arm-right:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  height: 35px;
+  width: 10px;
+  border: 5px solid #000000;
+}
+
+.arm-left {
+  position: absolute;
+  top: 90px;
+  right: 118px;
+  height: 55px;
+  width: 10px;
+  background: #000000;
+}
+
+.arm-left:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  height: 35px;
+  width: 10px;
+  border: 5px solid #000000;
+}
+
+.legs {
+  background: #000000;
+  position: absolute;
+  top: 169px;
+  left: 1px;
+  height: 41px;
+  width: 35px;
+  border: 5px solid #000;
+  box-shadow: 53px 0px 0px -5px #000,          
+              53px 0px 0px 0px #000;
+}
+.legs:before {
+  content: '';
+  position: absolute;
+  top: 31px;
+  left: -8px;
+  height: 17px;
+  width: 41px;
+  border: 5px solid #000000;
+  background: #000000;
+}
+.legs:after {
+  content: '';
+  position: absolute;
+  top: 31px;
+  left: 45px;
+  height: 17px;
+  width: 41px;
+  border: 5px solid #000000;
+  background: #000000;
+}
+
+.hearth {
+  content: '';
+  position: absolute;
+  top: 85px;
+  left: 68px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth1 {
+  content: '';
+  position: absolute;
+  top: 98px;
+  left: 40px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth2 {
+  content: '';
+  position: absolute;
+  top: 85px;
+  left: 54px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth3 {
+  content: '';
+  position: absolute;
+  top: 85px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth4 {
+  content: '';
+  position: absolute;
+  top: 85px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth5 {
+  content: '';
+  position: absolute;
+  top: 98px;
+  left: 54px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+.hearth6 {
+  content: '';
+  position: absolute;
+  top: 98px;
+  left: 68px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+.hearth7 {
+  content: '';
+  position: absolute;
+  top: 98px;
+  left: 82px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+.hearth8 {
+  content: '';
+  position: absolute;
+  top: 98px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+.hearth9 {
+  content: '';
+  position: absolute;
+  top: 98px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+.hearth10 {
+  content: '';
+  position: absolute;
+  top: 98px;
+  left: -2px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+.hearth11 {
+  content: '';
+  position: absolute;
+  top: 111px;
+  left: -2px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+.hearth12 {
+  content: '';
+  position: absolute;
+  top: 111px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+.hearth13 {
+  content: '';
+  position: absolute;
+  top: 111px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth14 {
+  content: '';
+  position: absolute;
+  top: 111px;
+  left: 40px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth15 {
+  content: '';
+  position: absolute;
+  top: 111px;
+  left: 54px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth16 {
+  content: '';
+  position: absolute;
+  top: 111px;
+  left: 68px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth17 {
+  content: '';
+  position: absolute;
+  top: 111px;
+  left: 82px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth18 {
+  content: '';
+  position: absolute;
+  top: 112px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth19 {
+  content: '';
+  position: absolute;
+  top: 114px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth20 {
+  content: '';
+  position: absolute;
+  top: 124px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth21 {
+  content: '';
+  position: absolute;
+  top: 124px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth22 {
+  content: '';
+  position: absolute;
+  top: 124px;
+  left: 40px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth23 {
+  content: '';
+  position: absolute;
+  top: 124px;
+  left: 54px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth24 {
+  content: '';
+  position: absolute;
+  top: 124px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth25 {
+  content: '';
+  position: absolute;
+  top: 124px;
+  left: 68px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth26 {
+  content: '';
+  position: absolute;
+  top: 128px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth27 {
+  content: '';
+  position: absolute;
+  top: 137px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth28 {
+  content: '';
+  position: absolute;
+  top: 137px;
+  left: 40px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth29 {
+  content: '';
+  position: absolute;
+  top: 137px;
+  left: 54px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+.hearth30 {
+  content: '';
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  height: 12px;
+  width: 12px;
+  background-color: #c60000;
+  /*  border: 2px solid #4F4F4F;*/
+  border-radius: 15px;
+  /*  box-shadow: 0px 16px 0px -1px #4F4F4F;*/
+  -webkit-animation: lights 2s infinite;
+  -moz-animation: lights 2s infinite;
+  -ms-animation: lights 2s infinite;
+  -o-animation: lights 2s infinite;
+}
+
+ 
+@-webkit-keyframes spin {
+  from, to {
+    -webkit-transform: rotate(0deg);
+  }
+  5% {
+    -webkit-transform: rotate(0deg);  
+  }
+  15% {
+    -webkit-transform: rotate(720deg); 
+  }
+  16% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from, to {
+    -moz-transform: rotate(0deg);
+  }
+  5% {
+    -moz-transform: rotate(0deg);  
+  }
+  15% {
+    -moz-transform: rotate(720deg); 
+  }
+  16% {
+    -moz-transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes spin {
+  from, to {
+    -ms-transform: rotate(0deg);
+  }
+  5% {
+    -ms-transform: rotate(0deg);  
+  }
+  15% {
+    -ms-transform: rotate(720deg); 
+  }
+  16% {
+    -ms-transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes spin {
+  from, to {
+    -o-transform: rotate(0deg);
+  }
+  5% {
+    -o-transform: rotate(0deg);  
+  }
+  15% {
+    -o-transform: rotate(720deg); 
+  }
+  16% {
+    -o-transform: rotate(0deg);
+  }
+}
+
+/* Only works in Firefox right now */
+
+@-webkit-keyframes lights {
+  from, to {
+    background-color: none;
+/*    border: 2px solid #4F4F4F;*/
+  }
+  20% {
+    background-color: #4F4F4F;
+  }
+  25% {
+    background-color: none;
+  }
+}
+
+@-moz-keyframes lights {
+  from, to {
+    background-color: none;
+    border: 2px solid #4F4F4F;
+    box-shadow: 0px 16px 0px -1px #4F4F4F;
+  }
+  20% {
+    background-color: #4F4F4F;
+  }
+  25% {
+    background-color: none;
+  }
+}
+
+@-ms-keyframes lights {
+  from, to {
+    background-color: none;
+    border: 2px solid #4F4F4F;
+    box-shadow: 0px 16px 0px -1px #4F4F4F;
+  }
+  20% {
+    background-color: #4F4F4F;
+  }
+  25% {
+    background-color: none;
+  }
+}
+
+@-o-keyframes lights {
+  from, to {
+    background-color: none;
+    border: 2px solid #4F4F4F;
+    box-shadow: 0px 16px 0px -1px #4F4F4F;
+  }
+  3s {
+    background-color: none;
+  }
+  4s {
+    background-color: #4F4F4F;
+  }
+  5s {
+    background-color: none;
+  }
+}
+
+@keyframes sonarWave {
+    from {
+        opacity: .5
+    }
+
+    to {
+        transform: scale(2.5);
+        opacity: 0
+    }
+}
+
+
+ 
+@-webkit-keyframes spin {
+  from, to {
+    -webkit-transform: rotate(0deg);
+  }
+  5% {
+    -webkit-transform: rotate(0deg);  
+  }
+  15% {
+    -webkit-transform: rotate(720deg); 
+  }
+  16% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from, to {
+    -moz-transform: rotate(0deg);
+  }
+  5% {
+    -moz-transform: rotate(0deg);  
+  }
+  15% {
+    -moz-transform: rotate(720deg); 
+  }
+  16% {
+    -moz-transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes spin {
+  from, to {
+    -ms-transform: rotate(0deg);
+  }
+  5% {
+    -ms-transform: rotate(0deg);  
+  }
+  15% {
+    -ms-transform: rotate(720deg); 
+  }
+  16% {
+    -ms-transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes spin {
+  from, to {
+    -o-transform: rotate(0deg);
+  }
+  5% {
+    -o-transform: rotate(0deg);  
+  }
+  15% {
+    -o-transform: rotate(720deg); 
+  }
+  16% {
+    -o-transform: rotate(0deg);
+  }
+}
+
+/* Only works in Firefox right now */
+
+@-webkit-keyframes lights {
+  from, to {
+    background-color: none;
+/*    border: 2px solid #4F4F4F;*/
+  }
+  20% {
+    background-color: #4F4F4F;
+  }
+  25% {
+    background-color: none;
+  }
+}
+
+@-moz-keyframes lights {
+  from, to {
+    background-color: none;
+    border: 2px solid #4F4F4F;
+    box-shadow: 0px 16px 0px -1px #4F4F4F;
+  }
+  20% {
+    background-color: #4F4F4F;
+  }
+  25% {
+    background-color: none;
+  }
+}
+
+@-ms-keyframes lights {
+  from, to {
+    background-color: none;
+    border: 2px solid #4F4F4F;
+    box-shadow: 0px 16px 0px -1px #4F4F4F;
+  }
+  20% {
+    background-color: #4F4F4F;
+  }
+  25% {
+    background-color: none;
+  }
+}
+
+@-o-keyframes lights {
+  from, to {
+    background-color: none;
+    border: 2px solid #4F4F4F;
+    box-shadow: 0px 16px 0px -1px #4F4F4F;
+  }
+  3s {
+    background-color: none;
+  }
+  4s {
+    background-color: #4F4F4F;
+  }
+  5s {
+    background-color: none;
+  }
+}
+
+@keyframes sonarWave {
+    from {
+        opacity: .7
+    }
+
+    to {
+        transform: scale(2.5);
+        opacity: 0
+    }
+}
